@@ -9,7 +9,12 @@ function App() {
   };
 
   const removeValue = () => {
-    setCounter(counter - 1);
+    if (counter <= 0) {
+      counter = 0;
+      setCounter(counter);
+    } else {
+      setCounter(counter - 1);
+    }
   };
 
   const reset = () => {
